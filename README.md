@@ -8,6 +8,8 @@ __Kinect Animation Studio Remaster exports Kinect V2 skeleton data as FBX motion
 
 ## System Requirements ( not including build requirements )
 
+*Using VibeCoding via OpenCode
+
 * [Originale Work](https://github.com/marcojrfurtado/KinectAnimationStudio) by [marcojrfurtado](https://github.com/marcojrfurtado)
 
 * Windows 8 or later
