@@ -1,5 +1,7 @@
 # KinectAnimationStudio-Remaster
 
+![image alt](https://github.com/SevenAnims/Kinect-Animation-Studio-Remaster/blob/main/images/Capture%20d'%C3%A9cran%202026-10-19%20150039.png)
+
 __Kinect Animation Studio Remaster exports Kinect V2 skeleton data as FBX motion files. Ideal for animating 3D models.__
 
 * No installation.
