@@ -1,0 +1,190 @@
+// Microsoft Visual C++ generated resource script.
+//
+#include "resource.h"
+
+#define APSTUDIO_READONLY_SYMBOLS
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 2 resource.
+//
+#define APSTUDIO_HIDDEN_SYMBOLS
+#include "windows.h"
+#undef APSTUDIO_HIDDEN_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+#undef APSTUDIO_READONLY_SYMBOLS
+
+/////////////////////////////////////////////////////////////////////////////
+// English (U.S.) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENU)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_US
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Icon
+//
+
+// Icon with lowest ID value placed first to ensure application icon
+// remains consistent on all systems.
+IDI_UI                  ICON                    "UI.ico"
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Menu
+//
+
+IDC_UI MENU 
+BEGIN
+    POPUP "&File"
+    BEGIN
+        MENUITEM "&New Session",                IDM_NEW_SESSION
+        MENUITEM SEPARATOR
+        MENUITEM "&Open Project...\tCtrl+O",   IDM_OPEN_PROJECT
+        MENUITEM "&Save Project...\tCtrl+S",   IDM_SAVE_PROJECT
+        MENUITEM SEPARATOR
+        MENUITEM "&Export FBX...\tCtrl+E",       IDM_EXPORT_FBX
+        MENUITEM "&Clear Take",                 IDM_CLEAR_TAKE
+        MENUITEM "&Delete Timeline",            IDM_DELETE_TIMELINE
+        MENUITEM SEPARATOR
+        MENUITEM "E&xit",                       IDM_EXIT
+    END
+    POPUP "&View"
+    BEGIN
+        MENUITEM "&Reset Camera",               IDM_RESET_CAM
+        MENUITEM "&Ghost Reference",            IDM_GHOST, CHECKED
+        MENUITEM "&Loop Playback",              IDM_LOOP, CHECKED
+    END
+    POPUP "&Playback"
+    BEGIN
+        MENUITEM "Go to &Start",                IDM_GO_START
+        MENUITEM "&Previous Frame",             IDM_PREV_FRAME
+        MENUITEM "&Next Frame",                 IDM_NEXT_FRAME
+        MENUITEM "Go to &End",                  IDM_GO_END
+        MENUITEM SEPARATOR
+        MENUITEM "Set &In Point (playhead)",    IDM_SET_IN
+        MENUITEM "Set &Out Point (playhead)",   IDM_SET_OUT
+        MENUITEM "&Clear In/Out Points",        IDM_CLEAR_RANGE
+        MENUITEM SEPARATOR
+        MENUITEM "Enable In/&Out Trim",         IDM_TOGGLE_TRIM, CHECKED
+    END
+    POPUP "&Help"
+    BEGIN
+        MENUITEM "&About ...",                  IDM_ABOUT
+    END
+    POPUP "&Editor"
+    BEGIN
+        MENUITEM "2D Body Editor (Mocap)",     IDM_TPOSE_EDITOR
+        MENUITEM "Node Motion Editor",         IDM_NODE_EDITOR
+    END
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Accelerator
+//
+
+IDC_UI ACCELERATORS 
+BEGIN
+    "O",            IDM_OPEN_PROJECT,        VIRTKEY, CONTROL
+    "S",            IDM_SAVE_PROJECT,        VIRTKEY, CONTROL
+    "E",            IDM_EXPORT_FBX,          VIRTKEY, CONTROL
+    "?",            IDM_ABOUT,              ASCII,  ALT
+    "/",            IDM_ABOUT,              ASCII,  ALT
+END
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Dialog
+//
+
+IDD_ABOUTBOX DIALOGEX 22, 17, 413, 83
+STYLE DS_SETFONT | DS_MODALFRAME | WS_CAPTION | WS_SYSMENU
+CAPTION "About"
+FONT 8, "System", 0, 0, 0x0
+BEGIN
+    LTEXT           "Copyright (c) 2015 Antonio Carlos Furtado. All rights reserved.",IDC_STATIC,3,72,220,8,SS_NOPREFIX
+    DEFPUSHBUTTON   "OK",IDOK,232,68,39,13,WS_GROUP
+    CONTROL         129,IDC_STATIC,"Static",SS_BITMAP,0,0,273,66
+END
+
+
+#ifdef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// TEXTINCLUDE
+//
+
+1 TEXTINCLUDE 
+BEGIN
+    "resource.h\0"
+END
+
+2 TEXTINCLUDE 
+BEGIN
+    "#define APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "#include ""windows.h""\r\n"
+    "#undef APSTUDIO_HIDDEN_SYMBOLS\r\n"
+    "\0"
+END
+
+3 TEXTINCLUDE 
+BEGIN
+    "\r\n"
+    "\0"
+END
+
+#endif    // APSTUDIO_INVOKED
+
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// String Table
+//
+
+STRINGTABLE 
+BEGIN
+    IDS_APP_TITLE           "UI"
+    IDC_UI                  "UI"
+	IDC_VIEW				"View"
+END
+
+#endif    // English (U.S.) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+/////////////////////////////////////////////////////////////////////////////
+// English (Canada) resources
+
+#if !defined(AFX_RESOURCE_DLL) || defined(AFX_TARG_ENC)
+#ifdef _WIN32
+LANGUAGE LANG_ENGLISH, SUBLANG_ENGLISH_CAN
+#pragma code_page(1252)
+#endif //_WIN32
+
+/////////////////////////////////////////////////////////////////////////////
+//
+// Bitmap
+//
+
+IDB_BITMAP1             BITMAP                  "About_banner.bmp"
+#endif    // English (Canada) resources
+/////////////////////////////////////////////////////////////////////////////
+
+
+
+#ifndef APSTUDIO_INVOKED
+/////////////////////////////////////////////////////////////////////////////
+//
+// Generated from the TEXTINCLUDE 3 resource.
+//
+
+
+/////////////////////////////////////////////////////////////////////////////
+#endif    // not APSTUDIO_INVOKED
+

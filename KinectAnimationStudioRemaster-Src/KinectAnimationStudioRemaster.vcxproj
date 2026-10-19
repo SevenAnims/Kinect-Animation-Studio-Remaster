@@ -1,0 +1,146 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="12.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{F04FE33E-CE64-4B58-AF06-B28DD9734858}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>KinectAnimationStudioRemaster</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+    <UseOfMfc>false</UseOfMfc>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v143</PlatformToolset>
+    <WholeProgramOptimization>false</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\KinectProject.props" />
+    <Import Project="..\FBXProject.props" />
+    <Import Project="..\DirD2Project.props" />
+  </ImportGroup>
+  <ImportGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="..\KinectProject.props" />
+    <Import Project="..\FBXProject.props" />
+    <Import Project="..\DirD2Project.props" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <VcpkgApplocalDeps>false</VcpkgApplocalDeps>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <VcpkgApplocalDeps>false</VcpkgApplocalDeps>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_WINDOWS;FBXSDK_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <RuntimeLibrary>MultiThreadedDebugDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <IgnoreAllDefaultLibraries>false</IgnoreAllDefaultLibraries>
+      <IgnoreSpecificDefaultLibraries>
+      </IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_WINDOWS;FBXSDK_SHARED;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>false</EnableCOMDATFolding>
+      <OptimizeReferences>false</OptimizeReferences>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="kinect\KBodyExporter.cpp" />
+    <ClCompile Include="kinect\KBodyReader.cpp" />
+    <ClCompile Include="kinect\KBodyVisualizer.cpp" />
+    <ClCompile Include="kinect\KASProject.cpp" />
+    <ClCompile Include="kinect\KDepthReader.cpp" />
+    <ClCompile Include="kinect\KinectFrameProcessor.cpp" />
+    <ClCompile Include="kinect\KNodeGraph.cpp" />
+    <ClCompile Include="kinect\KRetargeter.cpp" />
+    <ClCompile Include="kinect\OneEuroFilter.cpp" />
+    <ClCompile Include="UI\NodeEditor.cpp" />
+    <ClCompile Include="UI\TimelineWindow.cpp" />
+    <ClCompile Include="UI\UI.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="common\stdafx.h" />
+    <ClInclude Include="kinect\KASProject.h" />
+    <ClInclude Include="kinect\KBodyExporter.h" />
+    <ClInclude Include="kinect\KBodyReader.h" />
+    <ClInclude Include="kinect\KBodyVisualizer.h" />
+    <ClInclude Include="kinect\KDepthReader.h" />
+    <ClInclude Include="kinect\KinectFrameProcessor.h" />
+    <ClInclude Include="kinect\KNodeGraph.h" />
+    <ClInclude Include="kinect\KRetargeter.h" />
+    <ClInclude Include="kinect\kinect_typedef.h" />
+    <ClInclude Include="kinect\KRecording.h" />
+    <ClInclude Include="kinect\OneEuroFilter.h" />
+    <ClInclude Include="kinect\Session.h" />
+    <ClInclude Include="UI\resource.h" />
+    <ClInclude Include="UI\Theme.h" />
+    <ClInclude Include="UI\NodeEditor.h" />
+    <ClInclude Include="UI\TimelineWindow.h" />
+    <ClInclude Include="UI\UI.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="UI\About_banner.bmp" />
+    <Image Include="UI\UI.ico" />
+  </ItemGroup>
+  <ItemGroup>
+    <ResourceCompile Include="UI\UI.rc" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\CommonKinect\CommonKinect.vcxproj">
+      <Project>{50182805-3d70-46ee-b4cf-01e7a0f5b5b2}</Project>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+  <Target Name="CopyFbxDll" AfterTargets="Build">
+    <Copy SourceFiles="$(FBX_ROOT)\lib\x64\release\libfbxsdk.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" Condition="'$(Configuration)'=='Release'" />
+    <Copy SourceFiles="$(FBX_ROOT)\lib\x64\debug\libfbxsdk.dll" DestinationFolder="$(OutDir)" SkipUnchangedFiles="true" Condition="'$(Configuration)'=='Debug'" />
+  </Target>
+</Project>
